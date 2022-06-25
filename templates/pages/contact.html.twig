@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} à propos{% endblock %}
+{% block title %}{{ parent() }} nous contacter{% endblock %}
 
 {% block body %}
 
@@ -21,26 +21,34 @@
 					<div class="section-title text-left wow zoomIn">
 						<span>Restons en contact</span>	
 						<h2>Nous contacter</h2>
-					</div>	
-					<form class="contact-form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
-						<div class="row">
-							<div class="form-group col-md-6">
-								<input type="text" name="name" class="form-control" placeholder="Name" required="required">
-							</div>
-							<div class="form-group col-md-6">
-								<input type="email" name="email" class="form-control" placeholder="Email" required="required">
-							</div>
-							<div class="form-group col-md-12">
-								<input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
-							</div>
-							<div class="form-group col-md-12">
-								<textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
-							</div>
-							<div class="col-md-12 text-left">
-								<button type="submit" value="Send message" name="submit" class="btn btn-primary" title="Submit Your Message!"><i class="fa fa-send"></i> Envoyer votre message</button>
-							</div>
-						</div>
-					</form>							
+					</div>
+					{{ form_start(form, {'attr': {'class': "contact-form"}}) }}
+                        <div class="contact__form">
+                            <h3 class="contact__title">Contact Form</h3>
+                            <p>veuillez nous envoyer un message en remplissant le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+        
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    {{ form_row(form.nom) }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form_row(form.email) }}
+                                </div>
+                                <div class="form-group col-md-12">
+                                    {{ form_row(form.sujet) }}
+                                </div>
+                    
+                                <div class="form-group col-md-12">
+                                    {{ form_row(form.content) }}
+                                </div>
+                    
+                                <div class="col-md-12 text-left">
+									<button type="submit" value="Send message" name="submit" class="btn btn-primary" title="Submit Your Message!"><i class="fa fa-send"></i> Envoyer votre message</button>
+								</div>
+                                
+                            </div>
+                        </div>
+                    {{ form_end(form) }}						
 				</div><!-- END COL-->
 
 				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
