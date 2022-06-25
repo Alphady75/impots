@@ -41,6 +41,9 @@ form label{
 .pagination .page-item a{
 	color: #082680!important;
 }
+.alert{
+	margin: 0px!important;
+}
 /*
 ****************NAVBAR
 */
