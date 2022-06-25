@@ -18,7 +18,7 @@ use Symfony\Component\Mailer\MailerInterface;
 class QuestionnaireController extends AbstractController
 {
     #[Route('/reduire-vos-impots', name: 'test_eligibilite', methods: ['GET', 'POST'])]
-    public function testElibibilite(Request $request, EntityManagerInterface $entityManager): Response
+    public function testElibibilite(Request $request, EntityManagerInterface $entityManager, MailerInterface $mailerInterface): Response
     {
         $questionnaire = new Questionnaire();
         $form = $this->createForm(QuestionnaireType::class, $questionnaire);
@@ -26,10 +26,29 @@ class QuestionnaireController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            $code = random_int(100000000, 999999999);
+
+            $questionnaire->setSecurityCode($code);
+
             $entityManager->persist($questionnaire);
             $entityManager->flush();
 
-            $this->addFlash('success', 'Le contenu a bien été cré avec succès');
+
+            // Envoie de mail
+            $email = (new TemplatedEmail())
+                ->from('impots@gmail.com')
+                ->to($questionnaire->getEmail())
+                ->subject('Votre code de sécurité')
+                ->htmlTemplate('emails/verify_security_code_email.html.twig')
+                ->context([
+                    'useremail'  =>  $questionnaire->getEmail(),
+                    'securityCode'   =>  $code
+                ])
+            ;
+
+            $mailerInterface->send($email);
+
+            $this->addFlash('warning', 'Pour assurer la confidentialité un code sms va vous être envoyé par mail');
 
             return $this->redirectToRoute('verify_security_code', [], Response::HTTP_SEE_OTHER);
         }

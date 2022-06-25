@@ -23,7 +23,7 @@ class HomeController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $code = random_int(10000000, 99999999) . $questionnaire->getId();
+            $code = random_int(100000000, 999999999);
 
             $questionnaire->setSecurityCode($code);
 
@@ -51,7 +51,6 @@ class HomeController extends AbstractController
         }
 
         return $this->renderForm('home/index.html.twig', [
-            'controller_name' => 'HomeController',
             'form' => $form,
         ]);
     }
