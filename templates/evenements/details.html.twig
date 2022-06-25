@@ -24,27 +24,24 @@
                 </div>
 
                 <div>
-                    {% if event.link %}
-                        <a href="{{ event.link }}" class="btn btn-primary">Participer à l'événement</a>
-                    {% endif %}
+                    {{ event.description|raw }}
                 </div>
-
-                {{ event.description|raw }}
-
-            </div>
-
-            <aside class="col-lg-4" id="faq_cat">
 
                 {% if event.videoId %}
 
-                    <iframe id="ytplayer" type="text/html" width="100%" height="360"
+                    <iframe id="ytplayer" type="text/html" width="100%" height="500px"
                     src="http://www.youtube.com/embed/{{ event.videoId }}?autoplay=1&origin=http://example.com"
                     frameborder="0"/>
 
                 {% endif %}
 
-            </aside>
-            <!--/aside -->
+                <div class="pt-3">
+                    {% if event.link %}
+                        <a href="{{ event.link }}" class="btn btn-primary">Participer à l'événement</a>
+                    {% endif %}
+                </div>
+
+            </div>
 
         </div>
         <!-- /row -->
