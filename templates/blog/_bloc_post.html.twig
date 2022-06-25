@@ -2,7 +2,7 @@
     {% if post.imageName %}
     <div class="thumb-wrapper">
         <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}">
-            <img src="{{ vich_uploader_asset(post) | imagine_filter('medium_size') }}" class="img-fluid" alt="">
+            <img src="{{ vich_uploader_asset(post) | imagine_filter('medium_size') }}" class="img-fluid" alt="{{ post.name }}">
         </a>
     </div>
     {% endif %}
