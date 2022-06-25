@@ -1,0 +1,21 @@
+<div class="blog-single-item">
+    {% if post.imageName %}
+    <div class="thumb-wrapper">
+        <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}">
+            <img src="{{ vich_uploader_asset(post) | imagine_filter('medium_size') }}" class="img-fluid" alt="">
+        </a>
+    </div>
+    {% endif %}
+    <div class="blog-content">
+        <div class="blog-meta">
+            <span><i class="fas fa-calendar-alt"></i>{{ post.created|date('M d, Y') }}</span>
+            <span><i class="fas fa-user"></i>{{ post.user.prenoms }}</span>
+        </div>
+        <div class="blog-title">
+            <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}"><h5>{{ post.name }}</h5></a>
+        </div>
+        <div class="readmore-btn">
+            <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}">Lire plus <i class="fas fa-angle-double-right"></i></a>
+        </div>
+    </div>
+</div>

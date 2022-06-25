@@ -1,0 +1,54 @@
+/*RESPONSIVE DEVICE MEDIA 991PX*/
+
+@media (max-width: 1680px)  {
+
+}
+
+@media (max-width: 1320px)  {
+
+}
+
+@media (max-width: 1200px)  {
+	
+}
+
+@media (max-width: 991px)  {
+
+}
+
+/*RESPONSIVE DEVICE MEDIA 768PX*/
+@media only screen and (max-width:768px) {
+	h1,h2,h3,h4,h5,h6{
+		font-size: 18px!important;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	
+}
+
+/*RESPONSIVE DEVICE MEDIA 575PX*/
+@media (max-width: 575px)  {
+	.container-top-less{
+		margin-top: 0px!important;
+	}
+	.very-large-size{
+		font-size: 1.5em!important;
+	}
+	.large-size{
+		font-size: 1em!important;
+	}
+}
+
+/*RESPONSIVE DEVICE MEDIA 480PX*/
+@media (max-width: 480px)  {
+	
+}
+
+/*RESPONSIVE DEVICE MEDIA 360PX*/
+@media (max-width: 360px)  {
+
+	
+}
+
+

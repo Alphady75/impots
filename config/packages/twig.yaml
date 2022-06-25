@@ -1,5 +1,14 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    form_themes: ['bootstrap_4_layout.html.twig']
+    #form_themes: ['bootstrap_4_Horizontal_layout.html.twig']
+    globals:
+        app_environement: '%env(APP_ENV)%'
+        appName: 'IMPOT'
+        appEmail: 'contact@intellia.club'
+        appPhone: '04 65 27 06 06'
+        appConcepteur: "HL Conception"
+        currency: ' €'
 
 when@test:
     twig:

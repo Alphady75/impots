@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block body %}
+
+<section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ event.imageFile ? vich_uploader_asset(event) | imagine_filter('very_large_size') : '' }}" data-natural-width="1120" data-natural-height="400">
+    <div id="sub_content_in">
+        <h1>{{ event.name }}</h1>
+        <p>Evenements</p>
+    </div>
+</section>
+<!-- START ABOUT US -->
+
+<section id="general_page" class="home2-blog-area">
+    <div class="container margin_60_35">
+        <div class="row">
+
+            <div class="col-lg-8" id="faq">
+                <div class="main_title_3 add_top_30">
+                    <span><em></em></span>
+                    <h2>Du {{ event.startAt|date('d/m/Y') }} au {{ event.EndAt|date('d/m/Y') }}</h2>
+                    <p>De {{ event.heureDebut|date('H:i') }} à {{ event.heureFin|date('H:i') }} </p>
+                </div>
+
+                <div>
+                    {% if event.link %}
+                        <a href="{{ event.link }}" class="btn btn-primary">Participer à l'événement</a>
+                    {% endif %}
+                </div>
+
+                {{ event.description|raw }}
+
+            </div>
+
+            <aside class="col-lg-4" id="faq_cat">
+
+                {% if event.videoId %}
+
+                    <iframe id="ytplayer" type="text/html" width="100%" height="360"
+                    src="http://www.youtube.com/embed/{{ event.videoId }}?autoplay=1&origin=http://example.com"
+                    frameborder="0"/>
+
+                {% endif %}
+
+            </aside>
+            <!--/aside -->
+
+        </div>
+        <!-- /row -->
+    </div>
+    <!--/container-->
+</section>
+
+{% endblock %}
