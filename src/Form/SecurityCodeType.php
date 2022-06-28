@@ -14,7 +14,7 @@ class SecurityCodeType extends AbstractType
     {
         $builder
             ->add('securityCode', TextType::class, [
-                'label' => "Entrez le code de vérification reçu par email",
+                'label' => "Entrez le code de vérification reçu par mail",
                 'attr' => ['placeholder' => "prénom"],
                 'constraints' => [
                     new NotBlank([

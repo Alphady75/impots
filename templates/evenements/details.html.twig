@@ -4,19 +4,18 @@
 
 {% block body %}
 
-<section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ event.imageFile ? vich_uploader_asset(event) | imagine_filter('very_large_size') : '' }}" data-natural-width="1120" data-natural-height="400">
-    <div id="sub_content_in">
-        <h1>{{ event.name }}</h1>
-        <p>Evenements</p>
-    </div>
-</section>
-<!-- START ABOUT US -->
-
 <section id="general_page" class="home2-blog-area">
     <div class="container margin_60_35">
         <div class="row">
 
-            <div class="col-lg-8" id="faq">
+            <div class="col-lg-9" id="faq">
+
+                {% if event.videoId %}
+
+                        <iframe id="ytplayer" type="text/html" width="100%" height="500px" src="http://www.youtube.com/embed/{{ event.videoId }}?autoplay=1&origin=http://example.com" frameborder="0"/>
+
+                {% endif %}
+
                 <div class="main_title_3 add_top_30">
                     <span><em></em></span>
                     <h2>Du {{ event.startAt|date('d/m/Y') }} au {{ event.EndAt|date('d/m/Y') }}</h2>
@@ -26,14 +25,6 @@
                 <div>
                     {{ event.description|raw }}
                 </div>
-
-                {% if event.videoId %}
-
-                    <iframe id="ytplayer" type="text/html" width="100%" height="500px"
-                    src="http://www.youtube.com/embed/{{ event.videoId }}?autoplay=1&origin=http://example.com"
-                    frameborder="0"/>
-
-                {% endif %}
 
                 <div class="pt-3">
                     {% if event.link %}

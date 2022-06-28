@@ -4,7 +4,7 @@ twig:
     #form_themes: ['bootstrap_4_Horizontal_layout.html.twig']
     globals:
         app_environement: '%env(APP_ENV)%'
-        appName: 'GolImpot'
+        appName: 'GoImpot'
         appEmail: 'contact@intellia.club'
         appPhone: '04 65 27 06 06'
         appConcepteur: "HL Conception"

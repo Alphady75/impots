@@ -89,6 +89,7 @@ class EventType extends AbstractType
             ])
             ->add('online', CheckboxType::class, [
                 'label' => "Visible par tous",
+                'required' => false,
             ])
         ;
     }
