@@ -1,3 +1,7 @@
+.content{
+	width: 90%;
+	margin: auto;
+}
 .container-top-less{
 	margin-top: -400px;
 }
@@ -50,8 +54,13 @@ form label{
 .navbar{
 	padding: 15px 0;
 }
+
+.navbar .nav-item:hover .nav-link,
+.navbar .nav-item.active .nav-link{
+	color: #082680!important;
+}
 .navbar .nav-item .nav-link{
-	font-size: 16px;
+	font-size: 18px;
 	color: black;
 	font-weight: 600;
 }
@@ -60,6 +69,20 @@ form label{
 }
 section h2{
 	font-size: ;
+}
+.faq-section .card{
+	background: white!important;
+	margin-bottom: 20px!important;
+	border-radius: 2px!important;
+}
+.faq-section .card-header{
+	background: white!important;
+}
+.faq-section .card-header i{
+	margin-right: 10px;
+}
+.faq-section .card-header a{
+	color: gray!important;
 }
 /**
  * Costom size

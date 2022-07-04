@@ -1,4 +1,4 @@
-<div class="blog-single-item mt-3 mb-3">
+<br><div class="blog-single-item mt-3 mb-3" style="margin-bottom: 30px!important;">
     {% if post.imageName %}
     <div class="thumb-wrapper">
         <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}">
@@ -8,7 +8,7 @@
     {% endif %}
     <div class="blog-content">
         <div class="blog-meta">
-            <span><i class="fas fa-calendar-alt"></i>{{ post.created|date('M d, Y') }}</span>
+            <span><i class="fas fa-calendar-alt"></i>{{ post.created|date('d/m/Y') }}</span>
             <span><i class="fas fa-user"></i>{{ post.user.prenoms }}</span>
         </div>
         <div class="blog-title">
@@ -19,3 +19,5 @@
         </div>
     </div>
 </div>
+
+<br>

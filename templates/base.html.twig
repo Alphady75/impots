@@ -12,7 +12,7 @@
     <title>{% block title %}{{ appName }}{% endblock %}</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/fav.png') }}" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('themes/front/img/apple-touch-icon-72x72-precomposed.png') }}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('themes/front/img/apple-touch-icon-114x114-precomposed.png') }}">
@@ -59,13 +59,17 @@
 
         {{ include('partials/front/_navbar.html.twig') }}
 
+        {{ include('partials/front/_mobile_menu.html.twig') }}
+
     {% endblock %}
-    
-    <!-- /Header -->
 
-    {{ include('partials/_flash_message.html.twig') }}
+    <main id="general_page">
 
-    {% block body %}{% endblock %}
+        {{ include('partials/_flash_message.html.twig') }}
+
+        {% block body %}{% endblock %}
+
+    </main>
 
     <!-- Footer Start -->
     {% block footer %}

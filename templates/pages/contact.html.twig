@@ -5,7 +5,7 @@
 {% block body %}
 
 <!-- /Header -->
-	<section class="parallax_window_in bg-image" data-parallax="scroll" data-image-src="img/core/1.jpeg" style="background-image: url('img/core/1.jpeg');" data-natural-width="1120" data-natural-height="400">
+	<section class="parallax_window_in bg-image" data-parallax="scroll" data-image-src="{{ asset('themes/front/img/core/1.jpeg')}}" style="" data-natural-width="1120" data-natural-height="900">
 		<div id="sub_content_in">
 			<h1>Nous contacter</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -23,7 +23,7 @@
 						<h2>Nous contacter</h2>
 					</div>
 					{{ form_start(form, {'attr': {'class': "contact-form"}}) }}
-                        <div class="contact__form">
+                        <div class="contact__form mb-4">
                             <h3 class="contact__title">Contact Form</h3>
                             <p>veuillez nous envoyer un message en remplissant le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
         
