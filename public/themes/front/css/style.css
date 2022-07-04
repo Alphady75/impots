@@ -132,6 +132,7 @@ button.backward{
 button[disabled]{
 	display:none
 }
+.btn-primary:hover,
 .backward:hover,
 .forward:hover{
 	background:#0f293b!important;color:#fff}

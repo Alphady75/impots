@@ -74,10 +74,11 @@ class QuestionnaireController extends AbstractController
             $questionnaire = $questionnaireRepository->findOneBy(['securityCode' => $query]);
 
             if(!$questionnaire){
-                $errors = "Votre code de vérification est invalide";
+                $errors = "Le code de vérification \"". $query ."\" est invalide";
+            }else{
+                return $this->redirectToRoute('code_result', ['securitycode' => $query], Response::HTTP_SEE_OTHER);
             }
-
-            return $this->redirectToRoute('code_result', ['securitycode' => $query], Response::HTTP_SEE_OTHER);
+            
         }
 
         return $this->renderForm('questionnaire/verify_security_code.html.twig', [

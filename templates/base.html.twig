@@ -63,13 +63,9 @@
 
     {% endblock %}
 
-    <main id="general_page">
+    {{ include('partials/_flash_message.html.twig') }}
 
-        {{ include('partials/_flash_message.html.twig') }}
-
-        {% block body %}{% endblock %}
-
-    </main>
+    {% block body %}{% endblock %}
 
     <!-- Footer Start -->
     {% block footer %}

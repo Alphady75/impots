@@ -4,7 +4,8 @@
 
 {% block body %}
 
-{% if questionnaire %}
+<section class="section-padding">
+	{% if questionnaire %}
 
 	{% if questionnaire.activite == "Etudiant" %}
 
@@ -17,7 +18,7 @@
 	{% endif %}
 
 
-	{% if questionnaire.activite == "Salarie" %}
+	{% if questionnaire.activite == "Salarier" %}
 
 		{% if questionnaire.revNetMensuels < 2200 %}
 
@@ -47,5 +48,7 @@
 	{% endif %}
 
 {% endif %}
+
+</section>
 
 {% endblock %}
