@@ -48,7 +48,7 @@ class QuestionnaireController extends AbstractController
 
             $mailerInterface->send($email);
 
-            $this->addFlash('warning', 'Pour assurer la confidentialité un code sms va vous être envoyé par mail');
+            $this->addFlash('warning', 'Pour assurer la confidentialité un code sms vous a été envoyé par mail');
 
             return $this->redirectToRoute('verify_security_code', [], Response::HTTP_SEE_OTHER);
         }

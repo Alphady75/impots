@@ -3,7 +3,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12 md-mb-10">
+                <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
                     <div class="mb-40 mb-5">
                         <a href="{{ path('app_home') }}"><img src="{{ asset('img/logo.png') }}" alt="{{ appName }} Logo" class="img-fluid"></a>
                     </div>
@@ -26,36 +26,42 @@
 
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
-                    <h3 class="footer-title">Menu</h3>
+                <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
+                    <h3 class="footer-title">Vos impôts</h3>
                     <ul class="site-map">
                         <li><a href="{{ path('test_eligibilite') }}">Test d'éligibilité</a></li>
                         <li><a href="tax-strategy.html">Défiscaliser</a></li>
                         <li><a href="{{ path('test_eligibilite') }}">Réduire vos impôts</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
+                    <h3 class="footer-title">Liens utiles</h3>
+                    <ul class="site-map">
                         <li><a href="{{ path('app_blog') }}">S'informer</a></li>
                         <li><a href="{{ path('app_evenements') }}">Evénements</a></li>
+                        <li><a href="{{ path('pages_apropos') }}">A propos</a></li>
                         <li><a href="{{ path('pages_contact') }}">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 md-mb-10">
+                <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
                     <h3 class="footer-title">Contact Info</h3>
                     <ul class="site-map">
                         <li>
-                            <div class="desc">Ta-134/A, Gulshan Badda<br>
+                            <div class="desc text-light">Ta-134/A, Gulshan Badda<br>
                             Link Rd, Dhaka</div>
                         </li>
                         <li>
-                            <div class="desc">
+                            <div class="desc text-light">
                                 <a href="tel:(+880)15569569365">(+880)155 69569 365</a>
                             </div>
                         </li>
                         <li>
-                            <div class="desc">
+                            <div class="desc text-light">
                                 <a href="mailto:support@rstheme.com">support@rstheme.com</a>
                             </div>
                         </li>
                         <li>
-                            <div class="desc">
+                            <div class="desc text-light">
                                 Office Hours: 8AM - 11PM  
                             </div>
                         </li>
@@ -67,7 +73,7 @@
     <div class="footer-bottom">
         <div class="container">                    
             <div class="row y-middle">
-                <div class="col-lg-8 md-mb-10 text-lg-end text-left order-last">
+                <div class="col-lg-8 md-mb-10 text-lg-end text-center order-last">
                     <ul class="copy-right-menu">
                         <li><a href="{{ path('test_eligibilite') }}">Test d'éligibilité</a></li>
                         <li><a href="">Défiscaliser</a></li>
@@ -75,7 +81,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-4">
-                    <div class="copyright text-lg-start text-left ">
+                    <div class="copyright text-lg-start text-center ">
                         <p>© 2022 {{ appName }}. Tout Droits Reservés.</p>
                     </div>
                 </div>

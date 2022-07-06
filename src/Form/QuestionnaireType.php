@@ -101,7 +101,7 @@ class QuestionnaireType extends AbstractType
                 ],
             ])
             ->add('prenom', TextType::class, [
-                'label' => "Prénom",
+                'label' => false,
                 'attr' => ['placeholder' => "prénom"],
                 'constraints' => [
                     new NotBlank([
@@ -110,7 +110,7 @@ class QuestionnaireType extends AbstractType
                 ],
             ])
             ->add('nom', TextType::class, [
-                'label' => "Nom",
+                'label' => false,
                 'attr' => ['placeholder' => "Nom"],
                 'constraints' => [
                     new NotBlank([
@@ -119,7 +119,7 @@ class QuestionnaireType extends AbstractType
                 ],
             ])
             ->add('email', EmailType::class, [
-                'label' => 'Email',
+                'label' => false,
                 'attr' => ['placeholder' => 'Exemple@domail.com'],
                 'constraints' => [
                     new NotBlank([
@@ -131,7 +131,7 @@ class QuestionnaireType extends AbstractType
                 ],
             ])
             ->add('codePostal', IntegerType::class, [
-                'label' => 'Code postal',
+                'label' => false,
                 'attr' => ['placeholder' => 'Code postal'],
                 'constraints' => [
                     new NotBlank([
@@ -140,7 +140,7 @@ class QuestionnaireType extends AbstractType
                 ],
             ])
             ->add('telephone', TextType::class, [
-                'label' => "Téléphone",
+                'label' => false,
                 'attr' => ['placeholder' => "Téléphone"],
                 'constraints' => [
                     new NotBlank([

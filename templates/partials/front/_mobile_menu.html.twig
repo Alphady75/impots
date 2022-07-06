@@ -1,4 +1,4 @@
-<header class="header_in d-block d-md-none">
+<header class="header_in d-block d-md-none bg-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-3">
@@ -8,8 +8,8 @@
 				<!-- /social -->
 				<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
 				<!-- /menu button -->
-				<nav>
-					<ul class="cd-primary-nav">
+				<nav class="bg-white">
+					<ul class="cd-primary-nav bg-white">
 						<li class="{{ app.request.attributes.get('_route') == 'test_eligibilite' ? 'active' : '' }}">
 							<a class="animated_link" href="{{ path('test_eligibilite') }}">Reduire vos impôts</a>
 						</li>

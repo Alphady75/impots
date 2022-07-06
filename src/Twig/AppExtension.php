@@ -41,6 +41,6 @@ class AppExtension extends AbstractExtension
     {
         return $this->postRepository->findBy([
             'online' => 1
-        ], ['id' => 'DESC'], 4);
+        ], ['id' => 'DESC'], 3);
     }
 }

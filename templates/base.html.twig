@@ -40,7 +40,15 @@
     <script src="{{ asset('themes/front/js/modernizr.js') }}"></script>
 
     {% block stylesheets %}
+
+        {{ encore_entry_link_tags('import') }}
+
+        {{ encore_entry_link_tags('costom') }}
+
+        {{ encore_entry_link_tags('style') }}
+
         {{ encore_entry_link_tags('app') }}
+
     {% endblock %}
 
 </head>

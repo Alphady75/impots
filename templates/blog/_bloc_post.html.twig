@@ -8,14 +8,14 @@
     {% endif %}
     <div class="blog-content">
         <div class="blog-meta">
-            <span><i class="fas fa-calendar-alt"></i>{{ post.created|date('d/m/Y') }}</span>
-            <span><i class="fas fa-user"></i>{{ post.user.prenoms }}</span>
+            <span>{{ post.created|date('d/m/Y') }}</span>
+            <span>par {{ post.user.prenoms }}</span>
         </div>
         <div class="blog-title">
             <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}"><h5>{{ post.name }}</h5></a>
         </div>
         <div class="readmore-btn">
-            <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}">Lire plus <i class="fas fa-angle-double-right"></i></a>
+            <a href="{{ path('app_blog_detail', {'slug': post.slug}) }}">Lire plus</a>
         </div>
     </div>
 </div>

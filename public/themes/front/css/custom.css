@@ -15,6 +15,9 @@
 	background: #082680!important;
 	border: none!important;
 }
+.text-primary{
+	color: #015cbe!important;
+}
 form input[type='text'],
 form input[type='number'],
 form input[type='email'],
@@ -65,10 +68,7 @@ form label{
 	font-weight: 600;
 }
 .section-padding{
-	padding: 5% 0;
-}
-section h2{
-	font-size: ;
+	padding: 3% 0;
 }
 .faq-section .card{
 	background: white!important;
@@ -84,24 +84,27 @@ section h2{
 .faq-section .card-header a{
 	color: gray!important;
 }
+.btn{
+	padding: 1rem 1.455rem!important;
+	font-size: 1.3rem!important;
+}
 /**
  * Costom size
 **/
 .very-large-size{
-	font-size: 3rem;
+	font-size: 3.1rem!important;
 	font-weight: bold;
 	text-shadow: 0px 0px 30px 0px rgba(0,0,0,.1);
 }
-section h2,
 .large-size{
-	font-size: 1.8rem;
+	font-size: 2.5rem!important;
 	font-weight: 600;
 }
 .home-section .banner{
 	//height: auto;
 	padding-bottom: 90px; 
 	//background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url('../img/core/1.jpeg') ;
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.7)), url('../img/core/1.jpeg') ; 
+	background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7)), url('../img/core/1.jpeg') ; 
 	background-repeat: no-repeat; 
 	background-size: cover; 
 	background-position: center;

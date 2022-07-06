@@ -1,8 +1,11 @@
 <section class="home-section" id="general_page">
-	<div class="banner parallax_window_in" data-parallax="scroll" data-image-src="" data-natural-width="1120" data-natural-height="700">
+	<div class="banner parallax_window_in d-none d-sm-block" data-parallax="scroll" data-image-src="" data-natural-width="1120" data-natural-height="700">
 		<div class="caption">
-			<h1 class="font-weight-bold very-large-size pb-4 d-block d-sm-none text-center font-weight-bold p-4">Réduisez vos impôts Identifiez en 2 minutes si vous êtes éligible à des réductions d'impôts </h1>
+			
 		</div>
+	</div>
+	<div class="d-block d-sm-none" style="padding: 100px;">
+		
 	</div>
 	<div class="container container-top-less">
 		<div id="form_container">
@@ -10,9 +13,9 @@
 
 				{% if app.request.attributes.get('_route') == 'app_home' %}
 
-				<div class="col-md-7" id="faq">
+				<div class="col-md-6" id="faq">
 
-					<h1 class="font-weight-bold very-large-size pb-4 d-none d-sm-block">Réduisez vos impôts Identifiez en 2 minutes si vous êtes éligible à des réductions d'impôts </h1>
+					<h1 class="font-weight-bold very-large-size pb-4 d-none d-sm-block"><span class="text-primary">Réduisez vos impôts</span> Identifiez en 2 minutes si vous êtes éligible à des réductions d'impôts </h1>
 
 					<div class="step-elements d-none d-sm-block">
 						{{ include('home/_step_elements.html.twig') }}
@@ -21,16 +24,12 @@
 
 				{% endif %}
 
-				<div class="col-lg-5 mx-auto">
+				<div class="col-lg-6">
 
-					<div class="box_style_cat">
+					<div class="box_style_cat shadow-0">
 
 						{{ include('questionnaire/_form.html.twig') }}
 						
-					</div>
-
-					<div class="step-elements d-block d-sm-none">
-						{{ include('home/_step_elements.html.twig') }}
 					</div>
 
 				</div>
